@@ -1,0 +1,6 @@
+node_modules/
+.env
+play.sh
+package-lock.json
+*.pem
+certificate/
