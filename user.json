@@ -1,0 +1,284 @@
+{
+    "info": {
+      "_postman_id": "your_postman_id",
+      "name": "Your API Collection",
+      "description": "Description of your API collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Verify User",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+            
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"email\": \"user@example.com\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/verifyUser",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "verifyUser"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "User Registration (Email)",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+            
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"your_password\",\n  \"confirmPassword\": \"your_password\",\n  // Add other fields as needed\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/emailRegister",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "emailRegister"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "User Registration (Phone)",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+            
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"phoneNumber\": \"1234567890\",\n  \"password\": \"your_password\",\n  \"confirmPassword\": \"your_password\",\n  // Add other fields as needed\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/phoneRegister",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "phoneRegister"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Resend Phone 2FA",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer your_access_token"
+            }
+            
+          ],
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/resend_phone_2FA",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "resend_phone_2FA"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Verify Phone Login 2FA",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer your_access_token"
+            }
+            
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"code\": \"your_otp_code\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/verify_phone_login_2FA",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "verify_phone_login_2FA"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Resend 2FA",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer your_access_token"
+            }
+            
+          ],
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/resend_2FA",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "resend_2FA"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Verify 2FA",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer your_access_token"
+            }
+            
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"code\": \"your_otp_code\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/verify_2FA",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "verify_2FA"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Google Auth - Passport",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+            
+          ],
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/auth/google-redirect",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "auth",
+              "google-redirect"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Passport Callback",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+            
+          ],
+          "url": {
+            "raw": "http://localhost:8000/api/v1/user/passport-callback",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "api",
+              "v1",
+              "user",
+              "passport-callback"
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  

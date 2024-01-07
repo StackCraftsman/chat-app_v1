@@ -1,0 +1,206 @@
+{
+    "info": {
+      "_postman_id": "your_postman_id_here",
+      "name": "Group API",
+      "description": "API for managing groups",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Group",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"YourGroupName\",\n  \"slug\": \"YourGroupSlug\",\n  \"phone\": \"YourGroupPhone\",\n  \"website\": \"YourGroupWebsite\",\n  \"purpose\": \"YourGroupPurpose\",\n  \"anyoneCanJoin\": true,\n  \"description\": \"YourGroupDescription\",\n  \"coverPhoto\": \"YourCoverPhotoURL\",\n  \"pagePhoto\": \"YourPagePhotoURL\",\n  \"userId\": \"YourUserId\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/groups/create",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "groups",
+              "create"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Delete Group",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"groupId\": \"YourGroupId\",\n  \"userId\": \"YourUserId\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/groups/delete",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "groups",
+              "delete"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Join Group",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"groupId\": \"YourGroupId\",\n  \"userIds\": [\"UserId1\", \"UserId2\"]\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/groups/join",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "groups",
+              "join"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Leave Group",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"groupId\": \"YourGroupId\",\n  \"userId\": \"YourUserId\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/groups/leave",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "groups",
+              "leave"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Group Admins",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/groups/admins/YourGroupId",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "groups",
+              "admins",
+              "YourGroupId"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Make Group Admin",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"groupId\": \"YourGroupId\",\n  \"adminUserId\": \"AdminUserId\",\n  \"targetUserId\": \"TargetUserId\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/groups/make-admin",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "groups",
+              "make-admin"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Group Messages",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/groups/messages/YourGroupId",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "groups",
+              "messages",
+              "YourGroupId"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Post Group Message",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"groupId\": \"YourGroupId\",\n  \"userId\": \"YourUserId\",\n  \"msg\": \"YourMessage\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/groups/messages/post",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "groups",
+              "messages",
+              "post"
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  

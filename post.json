@@ -1,0 +1,151 @@
+{
+    "info": {
+      "_postman_id": "your_postman_id_here",
+      "name": "Post API",
+      "description": "API for managing user posts",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Make Post",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"desc\": \"YourPostDescription\",\n  \"photo\": \"YourPostPhotoURL\",\n  \"location\": \"YourPostLocation\",\n  \"friendTags\": [\"FriendId1\", \"FriendId2\"],\n  \"sharewithgroups\": [\"GroupId1\", \"GroupId2\"],\n  \"sharewithpages\": [\"PageId1\", \"PageId2\"]\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/posts/user/:user_id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "posts",
+              "user",
+              ":user_id"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Posts for User",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/posts/user/:user_id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "posts",
+              "user",
+              ":user_id"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Post for User",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/posts/:post_id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "posts",
+              ":post_id"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Delete Post for User",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/posts/:post_id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "posts",
+              ":post_id"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Toggle Like to Post",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/posts/toggle-like/:user_id/:post_id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "posts",
+              "toggle-like",
+              ":user_id",
+              ":post_id"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Add Comment to Post",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"text\": \"YourCommentText\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/posts/add-comment/:user_id/:post_id",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "posts",
+              "add-comment",
+              ":user_id",
+              ":post_id"
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
